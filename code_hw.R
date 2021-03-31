@@ -119,11 +119,11 @@ grid.arrange(p1,p2,nrow=2)
 #height seems more correlated than weight with age - seems to be 
 #a direct relationship
 
-p1<-ggplot(d, aes(x=height)) +geom_histogram(binwidth=1)
-p2<-ggplot(d, aes(x=weight)) +geom_histogram(binwidth=1)
-p3<-ggplot(d, aes(x=zombies_killed)) +geom_histogram(binwidth=1)
-p4<-ggplot(d, aes(x=years_of_education)) +geom_histogram(binwidth=1)
-p5<-ggplot(d, aes(x=age)) +geom_histogram(binwidth=1)
+p1<-ggplot(d, aes(x=height)) +geom_histogram(binwidth=2, color="black", fill="turquoise4")
+p2<-ggplot(d, aes(x=weight)) +geom_histogram(binwidth=2, color="black", fill="turquoise4")
+p3<-ggplot(d, aes(x=zombies_killed)) +geom_histogram(binwidth=2, color="black", fill="turquoise4")
+p4<-ggplot(d, aes(x=years_of_education)) +geom_histogram(binwidth=2, color="black", fill="turquoise4")
+p5<-ggplot(d, aes(x=age)) +geom_histogram(binwidth=2, color="black", fill="turquoise4")
 
 grid.arrange(p1, p2,p3,p4,p5, nrow=2, ncol=3)
 
@@ -179,11 +179,11 @@ se_sds
 #standard errors I calculated in my first sample
 
 
-p1<-ggplot(sample_dist, aes(x=height)) +geom_histogram(binwidth=1)
-p2<-ggplot(sample_dist, aes(x=weight)) +geom_histogram(binwidth=1)
-p3<-ggplot(sample_dist, aes(x=zombies_killed)) +geom_histogram(binwidth=1)
-p4<-ggplot(sample_dist, aes(x=years_of_education)) +geom_histogram(binwidth=1)
-p5<-ggplot(sample_dist, aes(x=age)) +geom_histogram(binwidth=1)
+p1<-ggplot(sample_dist, aes(x=height)) +geom_histogram(binwidth=1, color="black", fill="turquoise4")
+p2<-ggplot(sample_dist, aes(x=weight)) +geom_histogram(binwidth=1, color="black", fill="turquoise4")
+p3<-ggplot(sample_dist, aes(x=zombies_killed)) +geom_histogram(binwidth=1, color="black", fill="turquoise4")
+p4<-ggplot(sample_dist, aes(x=years_of_education)) +geom_histogram(binwidth=1, color="black", fill="turquoise4")
+p5<-ggplot(sample_dist, aes(x=age)) +geom_histogram(binwidth=1, color="black", fill="turquoise4")
 
 grid.arrange(p1, p2,p3,p4,p5, nrow=2, ncol=3)
 #they're all normally distributed except zombies killed and years
